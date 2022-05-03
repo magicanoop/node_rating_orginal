@@ -1,0 +1,411 @@
+/api/admin/v1/plan:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - plan
+    summary:
+      - Create Plan 
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                properties:
+                  courseMasterId:
+                    type: string
+                  courseModuleId:
+                    type: string  
+                  courseCurriculumId:
+                    type: string
+                  name:
+                    type: string
+                  duration: 
+                    type: number
+                  price: 
+                    type: number  
+                  isExclusiveTax:
+                    type: boolean,
+                  tax:
+                    type: object  
+                    properties:
+                      cgst:
+                        type: number
+                      sgst:
+                        type: number
+                  isCustom: 
+                    type: boolean
+                  isActive: 
+                    type: boolean
+                  createdByUser:
+                    type: string
+                  updatedByUser:
+                    type: string
+                    
+                example:
+                  courseMasterId : 618a24bead334337a0c15e03
+                  courseModuleId: 618b81a69ce1183bf0acca38
+                  courseCurriculumId: 618d082f3c7e60001f9547a3
+                  name: plan-B
+                  duration: 8050
+                  price: 0
+                  isExclusiveTax: false
+                  tax: {
+                    cgst: 11
+                    }
+                  isCustom: true
+                  isActive: true
+                  createdByUser: 618d082f3c7e60001f9547a4
+                  updatedByUser: 618d082f3c7e60001f9547a4
+                
+    responses:
+      "201" : 
+        description  : Created
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanDetails'
+               
+              example:
+                {
+                  "message": "Plan added successfully",
+                  "data": {
+                    "created": {
+                      "_id": "618d355c9802db38dc7b2b97",
+                      "courseMasterId": "618a24bead334337a0c15e03",
+                      "courseModuleId": "618b81a69ce1183bf0acca38",
+                      "courseCurriculumId": "618d082f3c7e60001f9547a3",
+                      "name": "plan-B",
+                      "duration": 8050,
+                      "price": 0,
+                      "isExclusiveTax": false,
+                      "tax": {
+                        "cgst": 11,
+                        "sgst": 14
+                      },
+                      "isCustom": true,
+                      "isActive": true,
+                      "createdByUser": "618d082f3c7e60001f9547a4",
+                      "updatedByUser": "618d082f3c7e60001f9547a4",
+                      "createdAt": "2021-11-11T15:23:08.251Z",
+                      "updatedAt": "2021-11-11T15:23:08.251Z",
+                      "__v": 0
+                    }
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+/api/admin/v1/plan/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - plan
+    summary:
+      - update Plan 
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                properties:
+                  courseMasterId:
+                    type: string
+                  courseModuleId:
+                    type: string  
+                  courseCurriculumId:
+                    type: string
+                  name:
+                    type: string
+                  duration: 
+                    type: number
+                  price: 
+                    type: number  
+                  isExclusiveTax:
+                    type: boolean,
+                  tax:
+                    type: object  
+                    properties:
+                      cgst:
+                        type: number
+                      sgst:
+                        type: number
+                  isCustom: 
+                    type: boolean
+                  isActive: 
+                    type: boolean
+                  createdByUser:
+                    type: string
+                  updatedByUser:
+                    type: string
+                    
+                example:
+                  courseMasterId : 618a24bead334337a0c15e03
+                  courseModuleId: 618b81a69ce1183bf0acca38
+                  courseCurriculumId: 618d082f3c7e60001f9547a3
+                  name: new plan B
+                  duration: 8050
+                  price: 0
+                  isExclusiveTax: false
+                  tax: {
+                    cgst: 11
+                    }
+                  isCustom: true
+                  isActive: true
+                
+    responses:
+      "200" : 
+        description  : Updated
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanDetails'
+              example:
+                {
+                  "message": "Plan updated successfully",
+                  "data": {
+                    "created": {
+                      "tax": {
+                        "cgst": 11,
+                        "sgst": 14
+                      },
+                      "_id": "618d3372ce114307d8959599",
+                      "courseMasterId": "618a24bead334337a0c15e03",
+                      "courseModuleId": "618b81a69ce1183bf0acca38",
+                      "courseCurriculumId": "618d082f3c7e60001f9547a3",
+                      "name": "new plan B",
+                      "duration": 8050,
+                      "price": 0,
+                      "isExclusiveTax": false,
+                      "isCustom": true,
+                      "isActive": true,
+                      "createdByUser": "618d082f3c7e60001f9547a4",
+                      "updatedByUser": "618d082f3c7e60001f9547a4",
+                      "createdAt": "2021-11-11T15:14:58.705Z",
+                      "updatedAt": "2021-11-11T15:16:27.311Z",
+                      "__v": 0
+                    }
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+
+  delete:   
+    produces:
+      - application/json
+    tags:
+      - plan
+    summary:
+      - delete Plan 
+    requestBody:
+    responses:
+      "200" : 
+        description  : deleted
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanDetails'
+              example:
+                {
+                  "message": "Plan deleted successfully",
+                  "data": {
+                    "tax": {
+                      "cgst": 11,
+                      "sgst": 14
+                    },
+                    "_id": "618d355c9802db38dc7b2b97",
+                    "courseMasterId": "618a24bead334337a0c15e03",
+                    "courseModuleId": "618b81a69ce1183bf0acca38",
+                    "courseCurriculumId": "618d082f3c7e60001f9547a3",
+                    "name": "plan-B",
+                    "duration": 8050,
+                    "price": 0,
+                    "isExclusiveTax": false,
+                    "isCustom": true,
+                    "isActive": true,
+                    "createdByUser": "618d082f3c7e60001f9547a4",
+                    "updatedByUser": "618d082f3c7e60001f9547a4",
+                    "createdAt": "2021-11-11T15:23:08.251Z",
+                    "updatedAt": "2021-11-11T15:23:08.251Z",
+                    "__v": 0
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+
+  get:   
+    produces:
+      - application/json
+    tags:
+      - plan
+    summary:
+      - view Plan  By Id
+    requestBody:
+    responses:
+      "200" : 
+        description  : view
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanDetails'
+              example:
+                {
+                  "message": "Plan Retrived successfully",
+                  "data": {
+                    "tax": {
+                      "cgst": 11,
+                      "sgst": 14
+                    },
+                    "_id": "618d3372ce114307d8959599",
+                    "courseMasterId": "618a24bead334337a0c15e03",
+                    "courseModuleId": "618b81a69ce1183bf0acca38",
+                    "courseCurriculumId": "618d082f3c7e60001f9547a3",
+                    "name": "new plan B",
+                    "duration": 8050,
+                    "price": 0,
+                    "isExclusiveTax": false,
+                    "isCustom": true,
+                    "isActive": true,
+                    "createdByUser": "618d082f3c7e60001f9547a4",
+                    "updatedByUser": "618d082f3c7e60001f9547a4",
+                    "createdAt": "2021-11-11T15:14:58.705Z",
+                    "updatedAt": "2021-11-11T15:16:27.311Z",
+                    "__v": 0
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+
+/api/admin/v1/plan/list/{courseModuleId}:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - plan
+    summary:
+      - list plans  By courseModuleId
+    requestBody:
+    responses:
+      "200" : 
+        description  : list
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlanDetails'   
+              example:
+                {
+                  "message": "Plans Retrived successfully",
+                  "data": {
+                    "result": {
+                      "results": [
+                        {
+                          "tax": {
+                            "cgst": 10,
+                            "sgst": 11
+                          },
+                          "isExclusiveTax": false,
+                          "isActive": true,
+                          "_id": "618d333fce114307d8959597",
+                          "courseMasterId": "618a24bead334337a0c15e03",
+                          "courseModuleId": "618b81a69ce1183bf0acca38",
+                          "courseCurriculumId": "618d082f3c7e60001f9547a3",
+                          "name": "plan-A",
+                          "duration": 50,
+                          "price": 0,
+                          "isCustom": true,
+                          "createdByUser": "618d082f3c7e60001f9547a4",
+                          "updatedByUser": "618d082f3c7e60001f9547a4",
+                          "createdAt": "2021-11-11T15:14:07.455Z",
+                          "updatedAt": "2021-11-11T15:14:07.455Z",
+                          "__v": 0
+                        }
+                      ],
+                      "total": 1
+                    }
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+
+
+components:
+  schemas:  
+    PlanDetails:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Status code
+        message:
+          type: string
+          description: Response message.
+        data:
+          type: object
+          properties:
+            courseMasterId:
+              type: string
+              description: courseMasterId of plan.
+            courseModuleId:
+              type: string
+            courseCurriculumId:
+              type: string
+              description: courseCurriculumId of plan.
+            name:
+              type: string
+              description: nameof plan.
+            duration: 
+              type: number
+              description: duration of plan.
+            price: 
+              type: number
+              description: price of plan.
+            isExclusiveTax:
+              type: boolean,
+              description: Tax type of plan.
+            tax:
+              type: object
+              description: taxt of plan.
+              properties:
+                cgst:
+                  type: number
+                  description: cgst tax of plan.
+                sgst:
+                  type: number
+                  description: sgst tax of plan.
+            isCustom: 
+              type: boolean
+              description: Plan is Custom or not.
+            isActive: 
+              type: boolean
+              description: status of plan.
+            createdByUser:
+              type: string
+              description: creator of plan.
+            updatedByUser:
+              type: string
+              description: updator of plan.

@@ -1,0 +1,80 @@
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:05:19.502Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:06:09.151Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:11:06.859Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T10:11:50.583Z"}
+[31merror[39m: Error occure while getting userUsers is not defined {"timestamp":"2022-04-29T10:11:58.110Z"}
+[31merror[39m: Error occured while normal loginUsers is not defined {"timestamp":"2022-04-29T10:11:58.112Z"}
+[31merror[39m: Error occured while loginUsers is not defined {"timestamp":"2022-04-29T10:11:58.113Z"}
+[31merror[39m: Error occured while login[object Object] {"timestamp":"2022-04-29T10:11:58.115Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:38:36.888Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T10:38:41.700Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:39:45.968Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T10:39:48.984Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T10:40:07.582Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T10:41:01.885Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:41:55.144Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T10:41:57.899Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:42:50.668Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T10:42:51.683Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:43:19.561Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T10:43:21.640Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:45:22.044Z"}
+[31merror[39m: Error occure while getting userCan't find user with this ID {"timestamp":"2022-04-29T10:45:23.847Z"}
+[31merror[39m: Error occure while retrieving userCan't find user with this ID {"timestamp":"2022-04-29T10:45:23.849Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:57:14.934Z"}
+[31merror[39m: Error occure while getting userCan't find user with this ID {"timestamp":"2022-04-29T10:57:19.554Z"}
+[31merror[39m: Error occure while retrieving userCan't find user with this ID {"timestamp":"2022-04-29T10:57:19.556Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:57:59.109Z"}
+[31merror[39m: Error occure while getting userCan't find user with this ID {"timestamp":"2022-04-29T10:58:01.558Z"}
+[31merror[39m: Error occure while retrieving userCan't find user with this ID {"timestamp":"2022-04-29T10:58:01.559Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:59:07.787Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T10:59:15.009Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T10:59:58.110Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T10:59:59.698Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:03:28.273Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:03:32.596Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:11:43.389Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:12:47.447Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:13:14.165Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:13:19.947Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:14:35.502Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:14:37.440Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:14:59.837Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:15:03.590Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:16:26.346Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:16:29.793Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:16:54.315Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:16:56.618Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:17:13.763Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:17:14.768Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:18:35.749Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:18:39.147Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T11:59:42.128Z"}
+[31merror[39m: Error occure while retrieving userfollowerService is not defined {"timestamp":"2022-04-29T11:59:45.158Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:00:37.376Z"}
+[31merror[39m: Error occure while retrieving userCannot read properties of undefined (reading 'toObject') {"timestamp":"2022-04-29T12:00:38.315Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:04:11.636Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:07:48.331Z"}
+[31merror[39m: Error occure while getting userCast to ObjectId failed for value "626bc0b1e71ebe39b48234549" (type string) at path "_id" for model "ratings" {"timestamp":"2022-04-29T12:08:01.351Z"}
+[31merror[39m: Error occure while retrieving userCast to ObjectId failed for value "626bc0b1e71ebe39b48234549" (type string) at path "_id" for model "ratings" {"timestamp":"2022-04-29T12:08:01.353Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:15:24.547Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T12:16:14.601Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:16:57.788Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T12:17:01.388Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:17:38.594Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T12:17:39.673Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:18:28.191Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:19:08.736Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:19:37.781Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:20:20.429Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:21:13.311Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-29T12:22:12.723Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:22:12.749Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:22:41.587Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:23:31.479Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:23:49.400Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:29:34.876Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:31:37.232Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:34:42.687Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:36:48.432Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-29T12:39:33.898Z"}

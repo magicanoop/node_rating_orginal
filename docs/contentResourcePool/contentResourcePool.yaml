@@ -1,0 +1,73 @@
+/api/admin/v1/contentPool:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - contentPool
+    summary:
+      - Create contentPool 
+    requestBody:
+        content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/contentPoolDetails'   
+                example:
+                  contents: [
+                    {
+                        type: video,
+                        description : hhuyhuiuiui,
+                        faculty: [jdfiujdi],
+                        courseId: 6193551141b98000215d3834,
+                        facultyId: "6190ac07e1349d171424d9e9",
+                        tags: ["hpp"],
+                        url: "https://nlabucket.s3.ap-south-1.amazonaws.com/publiccc/curriculum/f7c2e177-8194-4c02-9319-03c98c203712.jpg",
+                        duration: 3000,
+                        imageUrl: "https://nlabucket.s3.ap-south-1.amazonaws.com/public/curriculum/f7c2e177-8194-4c02-9319-03c98c203712.jpg",
+                        title: "video1"
+                    }
+                  ]
+                
+    responses:
+      "201" : 
+        description  : Created
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/contentPoolDetails'
+ 
+              example:
+                {
+                  "message": "Contents Inserted successfully",
+                  "data": [
+                    {
+                      "courseId": "6193551141b98000215d3834",
+                      "facultyId": "6190ac07e1349d171424d9e9",
+                      "avgRating": 0,
+                      "ratingCount": 0,
+                      "shareCount": 0,
+                      "likeCount": 0,
+                      "viewersCount": 0,
+                      "tags": [
+                        "hpp"
+                        ],
+                      "supportFiles": [],
+                      "_id": "6195fd1a4486b10bbc924107",
+                      "description": "hhuyhuiuiui",
+                      "imageUrl": "https://nlabucket.s3.ap-south-1.amazonaws.com/public/curriculum/f7c2e177-8194-4c02-9319-03c98c203712.jpg",
+                      "url": "https://nlabucket.s3.ap-south-1.amazonaws.com/publiccc/curriculum/f7c2e177-8194-4c02-9319-03c98c203712.jpg",
+                      "duration": 3000,
+                      "title": "video1",
+                      "__v": 0,
+                      "createdAt": "2021-11-18T07:13:30.180Z",
+                      "updatedAt": "2021-11-18T07:13:30.180Z"
+                      }
+                    ]
+                  }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+

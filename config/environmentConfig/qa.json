@@ -1,0 +1,137 @@
+{
+    "aws": {
+        "s3": {
+            "videoSourceBucketName": "dev-nla-source",
+            "imageSourceBucketName": "nlabucket",
+            "bucketRegion": "ap-south-1",
+            "s3UrlExpirationSeconds": 3000,
+            "sourceBucketName": "qa-nla-source",
+            "bucketName": "nlabucket",
+            "objectAcl": "public-read",
+            "privateAcl": "private",
+            "outputPath": "/assets"
+        }
+    },
+    "cloudFront": {
+      "url": "https://dev-cdn.neyyarapp.com",
+      "signedCookie": {
+        "domain": ".neyyarapp.com",
+        "path": "/",
+        "httpOnly": true,
+        "maxAge": 3600000
+      }
+    },
+    "paymentMode": [
+      "card",
+      "netbanking",
+      "wallet",
+      "emi",
+      "upi"
+    ],
+    "jwt": {
+      "secretKey": "neyyar_learning_app_2021",
+      "tokenExpiry": "365d",
+      "verificationExpiry": "2h"
+    },
+    "userRoles": [
+      "student",
+      "institute",
+      "admin",
+      "faculty",
+      "super_admin"
+    ],
+    "sms": {
+      "otpLength": 4,
+      "otpExpiration": "5m",
+      "host": "http://sms.neyyarapp.com/sendsms",
+      "uname": "Neyyar",
+      "route": "T",
+      "pwd": "klau2388",
+      "senderid": "NEYAPP",
+      "peid": "1701162874211433636",
+      "tempid": "1707162885430295307",
+      "randomStringLength": 11
+    },
+    "groups": {
+      "createdByTypes": {
+        "institute": 1,
+        "faculty": 2,
+        "student": 3,
+        "others": 0
+      },
+      "roles": [
+        "admin",
+        "member"
+      ]
+    },
+    "forumPost": {
+      "types": [
+        "text",
+        "image",
+        "video"
+      ],
+      "visibilityTypes": [
+        "only_me",
+        "public",
+        "group"
+      ],
+      "status": [
+        "drafted",
+        "published",
+        "reported"
+      ],
+      "createdByType": [
+        "student",
+        "institute",
+        "faculty",
+        "admin",
+        "super_admin"
+      ]
+    },
+    "memberStatus": [
+      "requested",
+      "invited",
+      "approved",
+      "declined",
+      "joined",
+      "left",
+      "removed"
+    ],
+    "contentResponse": {
+      "responseTypes": [
+        "comment",
+        "doubt"
+      ],
+      "contentTypes": [
+        "video",
+        "note"
+      ],
+      "types": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    "server_url": "https://app-dev-api.neyyarapp.com",
+    "client_url": "https://admin-dev.neyyarapp.com",
+    "app_logo_url": "/img/emailTemplate/otp/logo_transparant.png",
+    "hamburger":{
+      "sections":["section_1", "section_2", "section_3", "section_4"]
+    },
+    "admin": {
+      "email": "admin@yopmail.com",
+      "password": "admin@123",
+      "name": "super user",
+      "phone": "+911234567890"
+    },
+    "defaultLanguage": {
+      "isActive": true,
+      "tags": [],
+      "name": "English",
+      "icon": "E"
+    },
+    "feedback": {
+      "preferredLearningModel": ["Live Classes","Recorded Classes","Offline Classes"],
+      "preferredLearningTime": ["06:00 am – 10:00 am","10:00 am – 02:00 pm","02:00 pm – 06:00 pm","06:00 pm – 11:00 pm"]
+    }
+}

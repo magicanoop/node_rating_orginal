@@ -1,0 +1,59 @@
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T07:15:02.062Z"}
+[31merror[39m: Create error  ValidationError: rating: Path `rating` (6) is more than maximum allowed value (5). {"httpcode":404,"timestamp":"2022-04-30T07:40:13.722Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T07:44:35.392Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T07:47:14.791Z"}
+[31merror[39m: Create error  User has already rated this post {"httpcode":500,"timestamp":"2022-04-30T07:47:18.609Z"}
+[31merror[39m: Create error  User has already rated this post {"httpcode":500,"timestamp":"2022-04-30T07:47:31.053Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:06:51.025Z"}
+[31merror[39m: Error occure while getting userThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:08:18.281Z"}
+[31merror[39m: Error occure while retrieving dataThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:08:18.284Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:11:12.031Z"}
+[31merror[39m: Error occure while getting usera group specification must include an _id {"timestamp":"2022-04-30T08:11:16.968Z"}
+[31merror[39m: Error occure while retrieving dataa group specification must include an _id {"timestamp":"2022-04-30T08:11:16.969Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:11:45.598Z"}
+[31merror[39m: Error occure while getting userThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:11:48.319Z"}
+[31merror[39m: Error occure while retrieving dataThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:11:48.321Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:12:10.970Z"}
+[31merror[39m: Error occure while getting userThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:12:12.786Z"}
+[31merror[39m: Error occure while retrieving dataThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:12:12.788Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:12:33.999Z"}
+[31merror[39m: Error occure while getting userThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:12:35.652Z"}
+[31merror[39m: Error occure while retrieving dataThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:12:35.655Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:13:06.269Z"}
+[31merror[39m: Error occure while getting userThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:13:11.537Z"}
+[31merror[39m: Error occure while retrieving dataThe field 'postID' must be an accumulator object {"timestamp":"2022-04-30T08:13:11.538Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:15:32.507Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:29:25.627Z"}
+[31merror[39m: Error occure while getting userThe field '$match' must be an accumulator object {"timestamp":"2022-04-30T08:29:34.528Z"}
+[31merror[39m: Error occure while retrieving dataThe field '$match' must be an accumulator object {"timestamp":"2022-04-30T08:29:34.530Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:34:45.186Z"}
+[31merror[39m: Error occure while getting userThe field '$match' must be an accumulator object {"timestamp":"2022-04-30T08:34:48.179Z"}
+[31merror[39m: Error occure while retrieving dataThe field '$match' must be an accumulator object {"timestamp":"2022-04-30T08:34:48.181Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:36:25.066Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:41:08.262Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:41:30.022Z"}
+[31merror[39m: Error occure while getting dataa group specification must include an _id {"timestamp":"2022-04-30T08:41:31.880Z"}
+[31merror[39m: Error occure while retrieving dataa group specification must include an _id {"timestamp":"2022-04-30T08:41:31.881Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T08:41:45.497Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:33:49.572Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:35:30.593Z"}
+[31merror[39m: Error occure while getting userrating is not defined {"timestamp":"2022-04-30T09:35:33.905Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:38:11.790Z"}
+[31merror[39m: Error occure while getting userrating is not defined {"timestamp":"2022-04-30T09:38:15.122Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:38:48.017Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:39:05.241Z"}
+[31merror[39m: Error occure while getting userrating is not defined {"timestamp":"2022-04-30T09:39:08.055Z"}
+[31merror[39m: Error occure while getting user rating is not defined {"timestamp":"2022-04-30T09:39:44.603Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:39:44.632Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:40:58.225Z"}
+[31merror[39m: Error occure while getting user rating is not defined {"timestamp":"2022-04-30T09:41:04.369Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:42:42.818Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:44:57.902Z"}
+[31merror[39m: Error occure while processing Cast to ObjectId failed for value "626bc0ssse39b48e4549" (type string) at path "_id" for model "ratings" {"timestamp":"2022-04-30T09:45:10.712Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:45:54.578Z"}
+[31merror[39m: Error occure while processing Cast to ObjectId failed for value "626bc0ssse39b48e4549" (type string) at path "_id" for model "ratings" {"timestamp":"2022-04-30T09:45:59.067Z"}
+[31merror[39m: Error occure while processing Invalid username or password {"timestamp":"2022-04-30T09:46:39.766Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:47:20.107Z"}
+[31merror[39m: Error occure while processing Cast to ObjectId failed for value "626bc0b1e71d49" (type string) at path "_id" for model "ratings" {"timestamp":"2022-04-30T09:47:27.207Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:48:46.683Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-30T09:49:59.431Z"}

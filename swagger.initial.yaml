@@ -1,0 +1,26 @@
+openapi : 3.0.4
+info:
+  title : Neyyar Admin Api 
+  description : Neyyar Admin Apis documentation.
+  version : 1.0
+  contact : 
+    name : 
+    email: 
+  license : 
+    name : 
+    url : 
+servers : 
+  - url : "http://localhost:3000/"
+    description : This is a development Server 
+
+  - url : "https://admin-dev-api.neyyarapp.com"
+    description : This is a production Server  
+
+components:
+  securitySchemes:
+    authorization:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+security:
+  - authorization: []         # use the same name as above

@@ -1,0 +1,12 @@
+paths:
+  /: 
+    get : 
+      tags :
+        - main
+      summary : Here Starts everything  
+      desctiption : some random discription
+      responses : 
+        200 : 
+          description : Success on calling an api 
+          content:
+            type : string

@@ -1,0 +1,1095 @@
+/api/admin/v1/curriculum/subject/{id}:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Add subject 
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618a24fead334337a0c15e0f   
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                example: 
+                    title: Title 1
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found
+
+/api/admin/v1/curriculum/section/{curriculumId}/{subjectId}:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Add section
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2         
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                example: 
+                    title: Title 1
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found    
+        
+/api/admin/v1/curriculum/chapter/{curriculumId}/{subjectId}/{sectionId}:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Add chapter
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2  
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618bce56ba93f710b0ae6c68             
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                        tags:   
+                          type: array
+                          required: true 
+                example: 
+                    title: Title 1
+                    tags: [tag1, tag2]
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found    
+
+/api/admin/v1/curriculum/videoContent/{curriculumId}/{subjectId}/{sectionId}/{chapterId}:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Add video content
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2  
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618bce56ba93f710b0ae6c68 
+      - in: path
+        name: chapterId
+        description: The chapter id
+        required: true
+        schema:
+          type: string
+          example:
+            618bcf43ba93f710b0ae6c6a                   
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                        type:
+                          type: string
+                          required: true    
+                        faculty:   
+                          type: array
+                          required: true 
+                        description:   
+                          type: string
+                          required: true  
+                        imageUrl:   
+                          type: string
+                          required: true 
+                        url:   
+                          type: string
+                          required: true 
+                        duration:    
+                          type: string
+                          required: true 
+                        tags:  
+                          type: string
+                          required: true  
+                        facultyId:
+                          type: string
+                          required: true  
+                        courseId:
+                          type: string
+                          required: true 
+                example: 
+                    title: Title 1
+                    type: VIDEO
+                    faculty: [faculty1, faculty2]
+                    description: description
+                    imageUrl: https://nlabucket.s3.ap-south-1.amazonaws.com/public/curriculum/f7c2e177-8194-4c02-9319-03c98c203712.jpg
+                    url: https://nlabucket.s3.ap-south-1.amazonaws.com/courses/6094cda7492abd0914c2b30e/videos/IAS01Currenteventsofnationalandinternationalimportance..mp4
+                    duration: 10
+                    tags: [tag1, tag2]
+                    facultyId: 618a24fead334337a0c15e0f
+                    courseId: 618a24fead334337a0c15e0f
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found     
+
+/api/admin/v1/curriculum/noteContent/{curriculumId}/{subjectId}/{sectionId}/{chapterId}:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Add note content
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2  
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618bce56ba93f710b0ae6c68 
+      - in: path
+        name: chapterId
+        description: The chapter id
+        required: true
+        schema:
+          type: string
+          example:
+            618bcf43ba93f710b0ae6c6a                   
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                        type:
+                          type: string
+                          required: true    
+                        faculty:   
+                          type: array
+                          required: true 
+                        description:   
+                          type: string
+                          required: true  
+                        imageUrl:   
+                          type: string
+                          required: true 
+                        url:   
+                          type: string
+                          required: true 
+                        tags:  
+                          type: string
+                          required: true  
+                        facultyId:
+                          type: string
+                          required: true  
+                        courseId:
+                          type: string
+                          required: true  
+                example: 
+                    title: Title 1
+                    type: VIDEO
+                    faculty: [faculty1, faculty2]
+                    description: description
+                    imageUrl: https://nlabucket.s3.ap-south-1.amazonaws.com/public/curriculum/f7c2e177-8194-4c02-9319-03c98c203712.jpg
+                    url: https://nlabucket.s3.ap-south-1.amazonaws.com/courses/6094cda7492abd0914c2b30e/videos/IAS01Currenteventsofnationalandinternationalimportance..mp4
+                    tags: [tag1, tag2]
+                    facultyId: 618a24fead334337a0c15e0f
+                    courseId: 618a24fead334337a0c15e0f
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found        
+
+/api/admin/v1/curriculum/changeStatusOfSubject/{status}/{curriculumId}/{subjectId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Activate or deactivate all in subject
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: status
+        description: true / false
+        required: true
+        schema:
+          type: boolean
+          example:
+            true                    
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found      
+
+/api/admin/v1/curriculum/changeStatusOfSection/{status}/{curriculumId}/{subjectId}/{sectionId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Activate or deactivate all in section
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618e0c279916054e3485688f 
+      - in: path
+        name: status
+        description: true / false
+        required: true
+        schema:
+          type: boolean
+          example:
+            true                              
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found    
+
+/api/admin/v1/curriculum/changeStatusOfChapter/{status}/{curriculumId}/{subjectId}/{sectionId}/{chapterId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Activate or deactivate all in chapter
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: chapterId
+        description: The chapter Id
+        required: true
+        schema:
+          type: string
+          example:
+            618e165e26019c520449e9de  
+      - in: path
+        name: status
+        description: true / false
+        required: true
+        schema:
+          type: boolean
+          example:
+            true                                 
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found       
+
+/api/admin/v1/curriculum/changeStatusOfContent/{status}/{curriculumId}/{subjectId}/{sectionId}/{chapterId}/{contentId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Activate or deactivate content
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: chapterId
+        description: The chapter Id
+        required: true
+        schema:
+          type: string
+          example:
+            618e165e26019c520449e9de  
+      - in: path
+        name: contentId
+        description: The content id
+        required: true
+        schema:
+          type: string
+          example:
+            618e165e26019c520449e9de        
+      - in: path
+        name: status
+        description: true / false
+        required: true
+        schema:
+          type: boolean
+          example:
+            true                               
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found          
+
+/api/admin/v1/curriculum/editContent/{curriculumId}/{subjectId}/{sectionId}/{chapterId}/{contentId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Edit content
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: chapterId
+        description: The chapter Id
+        required: true
+        schema:
+          type: string
+          example:
+            618e165e26019c520449e9de  
+      - in: path
+        name: contentId
+        description: The content id
+        required: true
+        schema:
+          type: string
+          example:
+            618e165e26019c520449e9de  
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                        type:
+                          type: string
+                          required: true    
+                        faculty:   
+                          type: array
+                        description:   
+                          type: string
+                        imageUrl:   
+                          type: string
+                        contentId:   
+                          type: string
+                          required: true 
+                        url:   
+                          type: string
+                        duration:    
+                          type: string
+                        tags:  
+                          type: string
+                        facultyId:
+                          type: string
+                        startDateTime: 
+                          type: datetime 
+                        serviceProvider:
+                          type: string  
+                example: 
+                    title: Title 1
+                    type: VIDEO
+                    faculty: [faculty1, faculty2]
+                    description: description
+                    imageUrl: https://nlabucket.s3.ap-south-1.amazonaws.com/public/curriculum/f7c2e177-8194-4c02-9319-03c98c203712.jpg
+                    contentId: 618a6161bfd53737889860b2
+                    url: https://nlabucket.s3.ap-south-1.amazonaws.com/courses/6094cda7492abd0914c2b30e/videos/IAS01Currenteventsofnationalandinternationalimportance..mp4
+                    duration: 10
+                    tags: [tag1, tag2]
+                    facultyId: 618a24fead334337a0c15e0f   
+                    startDateTime: 2021-11-25T07:04:43.684+00:00    
+                    serviceProvider: zoom   
+
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found   
+
+/api/admin/v1/curriculum/editChapter/{curriculumId}/{subjectId}/{sectionId}/{chapterId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Edit chapter
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: chapterId
+        description: The chapter Id
+        required: true
+        schema:
+          type: string
+          example:
+            618e165e26019c520449e9de  
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                        tags:  
+                          type: string
+                          required: true   
+                example: 
+                    title: Title 1
+                    tags: [tag1, tag2]                                    
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found  
+
+/api/admin/v1/curriculum/editSection/{curriculumId}/{subjectId}/{sectionId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Edit section
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                example: 
+                    title: Title 1                                  
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found  
+
+/api/admin/v1/curriculum/editSubject/{curriculumId}/{subjectId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Edit subject
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2    
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                example: 
+                    title: Title 1                                  
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found  
+
+/api/admin/v1/curriculum/getCurriculumByCourseId/{id}:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Get curriculum by course id
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618a24fead334337a0c15e0f
+     
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found                              
+
+/api/admin/v1/curriculum/liveSessionContent/{curriculumId}/{subjectId}/{sectionId}/{chapterId}:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Add live session content
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2  
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618bce56ba93f710b0ae6c68 
+      - in: path
+        name: chapterId
+        description: The chapter id
+        required: true
+        schema:
+          type: string
+          example:
+            618bcf43ba93f710b0ae6c6a                   
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        title:
+                            type: string
+                            required: true 
+                        type:
+                          type: string
+                          required: true    
+                        faculty:   
+                          type: array
+                          required: true 
+                        description:   
+                          type: string
+                          required: true  
+                        imageUrl:   
+                          type: string
+                          required: true 
+                        duration:    
+                          type: string
+                          required: true  
+                        facultyId:
+                          type: string
+                          required: true  
+                        courseId:
+                          type: string
+                          required: true 
+                        startDateTime: 
+                          type: datetime
+                          required: true 
+                        serviceProvider: 
+                          type: string
+                          required: true
+                example: 
+                    title: Title 1
+                    type: LIVE
+                    faculty: [faculty1, faculty2]
+                    description: description
+                    imageUrl: https://nlabucket.s3.ap-south-1.amazonaws.com/public/curriculum/f7c2e177-8194-4c02-9319-03c98c203712.jpg
+                    duration: 10
+                    facultyId: 618a24fead334337a0c15e0f
+                    courseId: 618a24fead334337a0c15e0f
+                    startDateTime: 2021-11-25T07:04:43.684+00:00
+                    serviceProvider: zoom
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found   
+
+/api/admin/v1/curriculum/deleteContent/{curriculumId}/{subjectId}/{sectionId}/{chapterId}/{contentId}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Delete content
+    parameters:
+      - in: path
+        name: curriculumId
+        description: The curriculum id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc0 
+      - in: path
+        name: subjectId
+        description: The subject id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: sectionId
+        description: The section id
+        required: true
+        schema:
+          type: string
+          example:
+            618b7444b1a5da2abc8b7fc2   
+      - in: path
+        name: chapterId
+        description: The chapter Id
+        required: true
+        schema:
+          type: string
+          example:
+            618e165e26019c520449e9de  
+      - in: path
+        name: contentId
+        description: The content id
+        required: true
+        schema:
+          type: string
+          example:
+            618e165e26019c520449e9de  
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        type:
+                          type: string
+                          required: true    
+                        id:   
+                          type: string
+                          required: true 
+                          description: video/note/liveSession id
+                example: 
+                    type: VIDEO
+                    id: 6196609c5e810553608c0a72                                    
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found           
+/api/admin/v1/curriculum/curriculumSchedules:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - curriculum
+    summary:
+      - Get curriculum by course id
+    parameters:
+     
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found  

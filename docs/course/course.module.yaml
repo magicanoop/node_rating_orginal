@@ -1,0 +1,464 @@
+/api/admin/v1/course/courseModule:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Create a new course module    
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        name:
+                            type: string
+                            required: true 
+                        instituteId:
+                            type: string
+                            required: true    
+                        mainCategories:
+                            type: array
+                            required: true 
+                        subCategories:
+                            type: array
+                            required: true 
+                        moduleType: 
+                            type: string
+                            required: true
+                        planType: 
+                            type: string
+                            required: true   
+                        languages:
+                            type: array,
+                            required: true
+                        location:
+                            type: object 
+                        subtitleLanguages:
+                            type: object,
+                            required: true  
+                        description:  
+                          type: string,
+                          required: true  
+                        learningPoints:  
+                          type: array,
+                          required: true 
+                        tags:   
+                          type: array
+                          required: true 
+                        courseMasterId:
+                          type: string
+                          required: true      
+                        country: 
+                            type: string
+                        state: 
+                            type: string
+                        imageUrl:   
+                          type: string,
+                          required: true 
+                        startDate: 
+                          type: data
+                          required: true 
+                example: 
+                    name: Title 1
+                    instituteId: 60943e30a55be805e8a51935
+                    mainCategories: [60943e30a55be805e8a51935]
+                    subCategories: [60943e30a55be805e8a51935]
+                    moduleType: FREE
+                    planType: FREE
+                    languages: [malayalam, english]
+                    subtitleLanguages: [malayalam, english]
+                    description: description
+                    learningPoints: [point1, point2, point3]
+                    tags: [tag1, tag2, tag3]
+                    courseMasterId: 618a24b08a567001c4b7e01a
+                    courseModules: [
+                      {
+                        type: FREE,
+                        moduleId: 60943e30a55be805e8a51935
+                      }
+                    ]
+                    location: {
+                      type: POINT,
+                      coordinates: [123, 456]
+                    }
+                    country: india
+                    state: kerala
+                    imageUrl: imageUrl
+                    startDate: 2021-11-22T07:11:24.684Z
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found    
+
+/api/admin/v1/course/courseModule/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Update course module 
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618a2529ad334337a0c15e19     
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        name:
+                            type: string
+                            required: true 
+                        instituteId:
+                            type: string
+                            required: true    
+                        mainCategories:
+                            type: array
+                            required: true 
+                        subCategories:
+                            type: array
+                            required: true 
+                        moduleType: 
+                            type: string
+                            required: true
+                        planType: 
+                            type: string
+                            required: true   
+                        languages:
+                            type: array,
+                            required: true
+                        location:
+                            type: object 
+                        subtitleLanguages:
+                            type: object,
+                            required: true  
+                        description:  
+                          type: string,
+                          required: true  
+                        learningPoints:  
+                          type: array,
+                          required: true 
+                        tags:   
+                          type: array
+                          required: true 
+                        courseMasterId:
+                          type: string
+                          required: true      
+                        country: 
+                            type: string
+                        state: 
+                            type: string
+                        imageUrl:   
+                          type: string,
+                          required: true    
+                example: 
+                    name: Title 1
+                    instituteId: 60943e30a55be805e8a51935
+                    mainCategories: [60943e30a55be805e8a51935]
+                    subCategories: [60943e30a55be805e8a51935]
+                    moduleType: FREE
+                    planType: FREE
+                    languages: [malayalam, english]
+                    subtitleLanguages: [malayalam, english]
+                    description: description
+                    learningPoints: [point1, point2, point3]
+                    tags: [tag1, tag2, tag3]
+                    courseMasterId: 618a24b08a567001c4b7e01a
+                    courseModules: [
+                      {
+                        type: FREE,
+                        moduleId: 60943e30a55be805e8a51935
+                      }
+                    ]
+                    location: {
+                      type: POINT,
+                      coordinates: [123, 456]
+                    }
+                    country: india
+                    state: kerala
+                    imageUrl: imageUrl
+                    startDate: 2021-11-22T07:11:24.684Z
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found  
+
+/api/admin/v1/course/courseMaster/{courseModuleId}:
+  delete:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Delete course module 
+    parameters:
+      - in: path
+        name: courseModuleId
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618a2529ad334337a0c15e19     
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found   
+
+/api/admin/v1/course/courseModules:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Get course modules with course master id 
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        filters:
+                            type: object
+                            required: true 
+                        query:
+                            type: string
+                            required: true 
+                        sort:
+                            type: object
+                            required: true     
+                example: 
+                    filters: {
+                      courseMasterId: 60943e30a55be805e8a51935,
+                      moduleType: LIVE
+                    }
+                    query: 
+                    sort: {
+                    }   
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found  
+
+/api/admin/v1/course/courseModuleDetails/{id}:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Get course module by id 
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618a2529ad334337a0c15e19     
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found      
+
+/api/admin/v1/course/softDeleteCourseModule/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Soft delete course module
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618e37cccbdd0b001f0a27c7  
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found   
+
+/api/admin/v1/course/deactivateCourseModule/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Deactivate course module
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618e37cccbdd0b001f0a27c7  
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found  
+
+/api/admin/v1/course/activateCourseModule/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Activate course module
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618e37cccbdd0b001f0a27c7  
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found    
+
+/api/admin/v1/course/makeCourseModulePrivate/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Make as private
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618e37cccbdd0b001f0a27c7  
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found       
+
+/api/admin/v1/course/makeCourseModulePublic/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - course module
+    summary:
+      - Make as public 
+    parameters:
+      - in: path
+        name: id
+        description: The course module id
+        required: true
+        schema:
+          type: string
+          example:
+            618e37cccbdd0b001f0a27c7  
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found                                                
+  

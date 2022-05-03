@@ -1,0 +1,110 @@
+/api/admin/v1/search/global:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - search
+      - elasticsearch
+    summary:
+      - Search by text/keywords
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                example: 
+                  index: 'blog'
+                  type: 'posts'
+                  body:
+                   query:
+                     match: { "PostName": 'Node.js'}    
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found
+
+/api/admin/v1/search/group:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - search
+      - elasticsearch
+    summary:
+      - Search by text/keywords
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                example: 
+                  index: 'blog'
+                  type: 'posts'
+                  body:
+                   query:
+                     match: { "PostName": 'Node.js'}    
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found
+
+/api/admin/v1/ping:
+  get:
+    tags:
+      - search
+      - elasticsearch
+      - ping-search-service
+    summary:
+      - Ping search service for running status
+          
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found
+
+/api/admin/v1/bulk-operation:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - search
+      - elasticsearch
+    summary:
+      - Search by text/keywords
+    requestBody:
+        content: 
+            application/x-ndjson:
+                schema:
+                    type: object
+    responses:
+      "200" : 
+        description  : Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found

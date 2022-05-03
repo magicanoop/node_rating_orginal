@@ -1,0 +1,196 @@
+/api/admin/v1/licence:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - licence
+    summary:
+      - Create licence 
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        name:
+                            type: string
+                            required: true 
+                        email:
+                            type: string
+                            required: true
+                        availableMaxMeetingDuration:
+                            type: integer
+                            required: true        
+                example: 
+                      name: Course Director test 1
+                      email: coursedirector13@neyyar.in
+                      availableMaxMeetingDuration: 300
+
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found
+
+/api/admin/v1/licence/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - licence
+    summary:
+      - Update licence 
+    parameters:
+      - in: path
+        name: id
+        description: The licence id
+        schema:
+          type: string  
+          example:
+            6193759857d7173f48be568e       
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        name:
+                            type: string
+                            required: true 
+                        email:
+                            type: string
+                            required: true
+                        availableMaxMeetingDuration:
+                            type: integer
+                            required: true        
+                example: 
+                    {
+                      "name": "Course Director test 1",
+                      "email": "coursedirector13@neyyar.in",
+                      "availableMaxMeetingDuration": 300
+                    }   
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found 
+
+/api/admin/v1/licence/{licenceId}:
+  delete:   
+    produces:
+      - application/json
+    tags:
+      - licence
+    summary:
+      - Delete licence 
+    parameters:
+      - in: path
+        name: licenceId
+        description: The licence id
+        schema:
+          type: string  
+          example:
+            6193759857d7173f48be568e        
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found  
+
+/api/admin/v1/licence/details/{id}:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - licence
+    summary:
+      - Licence details
+    parameters:
+      - in: path
+        name: id
+        description: The licence id
+        schema:
+          type: string  
+          example:
+            6193759857d7173f48be568e        
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error
+      "404" : 
+        description  : Not Found      
+
+/api/app/v1/licence/listAll:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - licence
+    summary:
+      - List all licences 
+    parameters:
+      - in: query
+        name: page
+        description: page number
+        schema:
+          type: integer        
+      - in: query
+        name: size
+        description: size    
+        schema:
+          type: integer        
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        filters:
+                            type: object
+                        query:
+                            type: string
+                        sort:
+                            type: object    
+                example: 
+                    filters: {
+                    }
+                    query: 
+                    sort: {
+                    }
+          
+    responses:
+      "200" : 
+        description  : ok Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error                        

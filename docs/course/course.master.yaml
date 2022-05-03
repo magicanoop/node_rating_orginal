@@ -1,0 +1,252 @@
+/api/admin/v1/course/courseMaster:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - course master
+    summary:
+      - Creare course master 
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        name:
+                            type: string
+                            required: true 
+                        instituteId:
+                            type: string
+                            required: true    
+                        mainCategories:
+                            type: array
+                            required: true 
+                        subCategories:
+                            type: array
+                            required: true 
+                        hasLive: 
+                            type: boolean
+                            required: true
+                            default: false
+                        hasRecorded: 
+                            type: boolean
+                            required: true
+                            default: false    
+                        location:
+                            type: object   
+                        country: 
+                            type: string
+                        state: 
+                            type: string
+                example: 
+                    name: Title 1
+                    instituteId: 60943e30a55be805e8a51935
+                    mainCategories: [60943e30a55be805e8a51935]
+                    subCategories: [60943e30a55be805e8a51935]
+                    hasLive: true
+                    hasRecorded: false
+                    location: {
+                      type: POINT,
+                      coordinates: [123, 456]
+                    }
+                    country: india
+                    state: kerala
+          
+    responses:
+      "201" : 
+        description  : Created
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error  
+
+/api/admin/v1/course/courseMaster/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - course master
+    summary:
+      - Update course master    
+    parameters:
+      - in: path
+        name: id
+        description: The course master id
+        required: true
+        schema:
+          type: string
+          example:
+            618bb5cf6d23055f3458c73b
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        name:
+                            type: string
+                            required: true 
+                        instituteId:
+                            type: string
+                            required: true    
+                        mainCategories:
+                            type: array
+                            items:
+                              type: string
+                              required: true 
+                        subCategories:
+                            type: array
+                            required: true 
+                        hasLive: 
+                            type: boolean
+                            required: true
+                            default: false
+                        hasRecorded: 
+                            type: boolean
+                            required: true
+                            default: false    
+                        courseModules:
+                            type: array,
+                            required: true 
+                        location:
+                            type: object   
+                        country: 
+                            type: string
+                        state: 
+                            type: string
+                example: 
+                    name: Title 1
+                    instituteId: 60943e30a55be805e8a51935
+                    mainCategories: [60943e30a55be805e8a51935]
+                    subCategories: [60943e30a55be805e8a51935]
+                    hasLive: true
+                    hasRecorded: false
+                    courseModules: [
+                      {
+                        type: FREE,
+                        moduleId: 60943e30a55be805e8a51935
+                      }
+                    ]
+                    location: {
+                      type: POINT,
+                      coordinates: [123, 456]
+                    }
+                    country: india
+                    state: kerala
+          
+    responses:
+      "200" : 
+        description  : ok Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error        
+
+/api/admin/v1/course/courseMaster/{courseMasterId}:
+  delete:   
+    produces:
+      - application/json
+    tags:
+      - course master
+    summary:
+      - Delete course master    
+    parameters:
+      - in: path
+        name: courseMasterId
+        description: The course master id
+        required: true
+        schema:
+          type: string
+          example:
+            618bb5cf6d23055f3458c73b
+          
+    responses:
+      "200" : 
+        description  : ok Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error    
+        
+/api/admin/v1/course/courseMasters:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - course master
+    summary:
+      - Get all course masters     
+          
+    responses:
+      "200" : 
+        description  : ok Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+        
+/api/app/v1/course/search:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - course master
+    summary:
+      - Course master search 
+    parameters:
+      - in: query
+        name: page
+        description: page number
+        schema:
+          type: integer        
+      - in: query
+        name: size
+        description: size    
+        schema:
+          type: integer        
+    requestBody:
+        content: 
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                        filters:
+                            type: object
+                            required: true 
+                        query:
+                            type: string
+                            required: true 
+                        sort:
+                            type: object
+                            required: true     
+                example: 
+                    filters: {
+                      mainCategories: [60943e30a55be805e8a51935],
+                      subCategories: [60943e30a55be805e8a51935]
+                    }
+                    query: 
+                    sort: {
+                      avgRating: desc
+                    }
+          
+    responses:
+      "200" : 
+        description  : ok Success
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error  
+
+
+        
+                   

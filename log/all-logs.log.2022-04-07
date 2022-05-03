@@ -1,0 +1,106 @@
+[33mwarn[39m: Mongoose default connection disconnected {"timestamp":"2022-04-07T06:35:27.490Z"}
+[31merror[39m: Mongoose default connection error: MongooseServerSelectionError: getaddrinfo ENOTFOUND undefined {"timestamp":"2022-04-07T06:35:27.494Z"}
+[33mwarn[39m: Mongoose default connection disconnected {"timestamp":"2022-04-07T08:40:09.399Z"}
+[31merror[39m: Mongoose default connection error: MongooseServerSelectionError: getaddrinfo ENOTFOUND undefined {"timestamp":"2022-04-07T08:40:09.402Z"}
+[33mwarn[39m: Mongoose default connection disconnected {"timestamp":"2022-04-07T08:41:23.487Z"}
+[31merror[39m: Mongoose default connection error: MongooseServerSelectionError: getaddrinfo ENOTFOUND undefined {"timestamp":"2022-04-07T08:41:23.488Z"}
+[33mwarn[39m: Mongoose default connection disconnected {"timestamp":"2022-04-07T08:42:01.448Z"}
+[31merror[39m: Mongoose default connection error: MongooseServerSelectionError: getaddrinfo ENOTFOUND undefined {"timestamp":"2022-04-07T08:42:01.450Z"}
+[33mwarn[39m: Mongoose default connection disconnected {"timestamp":"2022-04-07T08:45:35.301Z"}
+[31merror[39m: Mongoose default connection error: MongooseServerSelectionError: getaddrinfo ENOTFOUND undefined {"timestamp":"2022-04-07T08:45:35.307Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:46:57.156Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:46:57.163Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:48:58.726Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:48:58.732Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:50:35.801Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:50:35.807Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:51:42.609Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:51:42.615Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:54:34.548Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:54:34.553Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:54:47.199Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:54:47.204Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:56:03.101Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:56:03.105Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:57:52.203Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:57:52.213Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T08:59:21.448Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T08:59:21.453Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:04:47.160Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:04:47.165Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:05:55.563Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:05:55.568Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:06:16.111Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:06:16.116Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:08:29.934Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:08:29.940Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:08:52.765Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:08:52.773Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:09:23.370Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:09:23.379Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:09:47.738Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:09:47.747Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:10:21.175Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:10:21.182Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:10:55.451Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:10:55.460Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:11:14.467Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:11:14.473Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:12:23.349Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:12:23.356Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:12:46.363Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:12:46.371Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:13:29.589Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:13:29.597Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:13:44.636Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:13:44.646Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:25:30.767Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:25:30.775Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:26:12.380Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:26:12.387Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:26:38.626Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:26:38.632Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:27:01.222Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:27:01.230Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:27:16.259Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:27:16.267Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:27:32.827Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:27:32.835Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:28:09.289Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:28:09.298Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:28:21.110Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:28:21.119Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:28:39.764Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:28:39.772Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:30:44.364Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:30:44.374Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:33:02.903Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:33:02.915Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:35:24.190Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:35:24.196Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:36:46.416Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:36:46.424Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:37:15.294Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:37:15.302Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:37:36.686Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:37:36.692Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:37:49.683Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:37:49.691Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:38:30.961Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:38:30.968Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:40:48.953Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:40:48.961Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:44:09.481Z"}
+[31merror[39m: Migration error {"error":{},"timestamp":"2022-04-07T09:44:09.488Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T09:48:22.989Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T10:13:53.046Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T10:19:09.917Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T10:19:43.332Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T10:19:59.339Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T10:20:54.045Z"}
+[32minfo[39m: Error: Path not found {"timestamp":"2022-04-07T10:21:07.850Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T11:04:45.289Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T11:35:00.948Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T11:52:32.514Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T11:59:02.726Z"}
+[32minfo[39m: Mongoose default connection open {"timestamp":"2022-04-07T11:59:43.150Z"}

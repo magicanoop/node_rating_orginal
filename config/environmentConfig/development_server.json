@@ -1,0 +1,178 @@
+{
+  "aws": {
+    "s3": {
+      "videoSourceBucketName": "dev-nla-source",
+      "imageSourceBucketName": "nlabucket",
+      "bucketRegion": "ap-south-1",
+      "s3UrlExpirationSeconds": 3000,
+      "sourceBucketName": "dev-nla-source",
+      "bucketName": "nlabucket",
+      "objectAcl": "public-read",
+      "privateAcl": "private",
+      "outputPath": "/assets"
+    }
+  },
+  "cloudFront": {
+    "url": "https://dev-cdn.neyyarapp.com",
+    "signedCookie": {
+      "domain": ".neyyarapp.com",
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": 3600000
+    }
+  },
+  "paymentMode": [
+    "card",
+    "netbanking",
+    "wallet",
+    "emi",
+    "upi"
+  ],
+  "jwt": {
+    "secretKey": "neyyar_learning_app_2021",
+    "tokenExpiry": "365d",
+    "verificationExpiry": "2h"
+  },
+  "userRoles": [
+    "student",
+    "institute",
+    "admin",
+    "faculty",
+    "super_admin"
+  ],
+  "sms": {
+    "otpLength": 4,
+    "otpExpiration": "5m",
+    "host": "http://sms.neyyarapp.com/sendsms",
+    "uname": "Neyyar",
+    "route": "T",
+    "pwd": "klau2388",
+    "senderid": "NEYAPP",
+    "peid": "1701162874211433636",
+    "tempid": "1707162885430295307",
+    "randomStringLength": 11
+  },
+  "groups": {
+    "createdByTypes": {
+      "institute": 1,
+      "faculty": 2,
+      "student": 3,
+      "others": 0
+    },
+    "roles": [
+      "admin",
+      "member"
+    ]
+  },
+  "forumPost": {
+    "types": [
+      "text",
+      "image",
+      "video"
+    ],
+    "visibilityTypes": [
+      "only_me",
+      "public",
+      "group"
+    ],
+    "status": [
+      "drafted",
+      "published",
+      "reported"
+    ],
+    "createdByType": [
+      "student",
+      "institute",
+      "faculty",
+      "admin",
+      "super_admin"
+    ]
+  },
+  "memberStatus": [
+    "requested",
+    "invited",
+    "approved",
+    "declined",
+    "joined",
+    "left",
+    "removed"
+  ],
+  "email": {
+    "fromAddress": "customerservice@neyyarapp.com",
+    "replyToAddresses": "no-reply@neyyarapp.com",
+    "userVerificationEmailTemplateName": "VerificationEmail",
+    "forgotPasswordEmailTemplateName": "ForgotPasswordEmail",
+    "studentOtp": "student_otp",
+    "studentVerification": "student_verification",
+    "otp": {
+      "subject": "One Time Password(OTP)",
+      "otpImageUrl": "/img/emailTemplate/otp/otp_bg.png",
+      "whiteBackGroundUrl": "/img/emailTemplate/otp/otp_white_bg.png",
+      "otpTamplatePath": "/config/templates/email/otpEmail.html"
+    },
+    "studentReg": {
+      "subject": "Account Confirmation",
+      "regImageUrl": "/img/emailTemplate/otp/welcome.png",
+      "templatePath": "/config/templates/email/welcomeStudent.html"
+    },
+    "forgotPwd": {
+      "subject": "Account Password Reset",
+      "BGImageUrl": "/img/emailTemplate/otp/forgotpassword.png",
+      "templatePath": "/config/templates/email/forgotPasswordEmail.html"
+    },
+    "freeSubscription": {
+      "subject": "Subcription Confirmation",
+      "regImageUrl": "/img/emailTemplate/otp/welcome.png",
+      "templatePath": "/config/templates/email/freeSubcription.html"
+    },
+    "paidSubscription": {
+      "subject": "Subcription Confirmation",
+      "regImageUrl": "/img/emailTemplate/otp/welcome.png",
+      "templatePath": "/config/templates/email/paidSubcription.html"
+    }
+  },
+  "server_url": "https://admin-dev-api.neyyarapp.com",
+  "client_url": "https://admin-dev.neyyarapp.com",
+  "app_logo_url": "/img/emailTemplate/otp/logo_transparant.png",
+  "contentResponse": {
+    "responseTypes": [
+      "comment",
+      "doubt"
+    ],
+    "contentTypes": [
+      "video",
+      "note"
+    ],
+    "types": [
+      "text",
+      "image",
+      "video"
+    ]
+  },
+  "homePage": {
+    "types": [
+      "course",
+      "single_content",
+      "live_class"
+    ]
+  },
+  "hamburger":{
+    "sections":["section_1", "section_2", "section_3", "section_4"]
+  },
+  "admin": {
+    "email": "admin@yopmail.com",
+    "password": "admin@123",
+    "name": "super user",
+    "phone": "+911234567890"
+  },
+  "defaultLanguage": {
+    "isActive": true,
+    "tags": [],
+    "name": "English",
+    "icon": "E"
+  },
+  "feedback": {
+    "preferredLearningModel": ["Live Classes","Recorded Classes","Offline Classes"],
+    "preferredLearningTime": ["06:00 am – 10:00 am","10:00 am – 02:00 pm","02:00 pm – 06:00 pm","06:00 pm – 11:00 pm"]
+  }
+}

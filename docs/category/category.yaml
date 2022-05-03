@@ -1,0 +1,241 @@
+/api/admin/v1/category:
+  post:   
+    produces:
+      - application/json
+    tags:
+      - category
+    summary:
+      - Create category 
+    requestBody:
+      content: 
+        application/json:
+          schema:     
+            example:
+              {
+                title: am,
+                parentId: 619cc43cbd9c5a22c86919c0,
+                code: abc123chbj,
+                ImageUrl: "https://en.wikipedia.org/wiki/File:Image_created_with_a_mobile_phone.png",
+                isHome: false
+              }
+                
+    responses:
+      "201" : 
+        description  : Created
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categoryDetails'
+               
+              example:
+                {
+                  "message": "Category added successfully",
+                  "data": {
+                    "created": {
+                      "parentId": "619cc43cbd9c5a22c86919c0",
+                      "isHome": false,
+                      "_id": "619cd1f451d9923f908f001b",
+                      "title": "am",
+                      "code": "abc123chbj",
+                      "ImageUrl": "https://en.wikipedia.org/wiki/File:Image_created_with_a_mobile_phone.png",
+                      "createdAt": "2021-11-23T11:35:16.188Z",
+                      "updatedAt": "2021-11-23T11:35:16.188Z",
+                      "__v": 0
+                    }
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+/api/admin/v1/category/{id}:
+  put:   
+    produces:
+      - application/json
+    tags:
+      - category
+    summary:
+      - update category 
+    requestBody:
+      content: 
+        application/json:
+          schema:            
+          example:
+            {
+              title: title133vcfgcb,
+              parentId: 619cc43cbd9c5a22c86919c0,
+              code: abc123ch,
+              ImageUrl: https://en.wikipedia.org/wiki/File:Image_created_with_a_mobile_phone.png,
+              isHome: true
+            }
+                
+    responses:
+      "200" : 
+        description  : Updated
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categoryDetails'
+              example:
+                {
+                  "message": "Category updated successfully",
+                  "data": {
+                    "created": {
+                      "parentId": "619cc43cbd9c5a22c86919c0",
+                      "isHome": true,
+                      "_id": "619cc9049bdb650080a5fe44",
+                      "title": "title133vcfgcb",
+                      "code": "abc123ch",
+                      "ImageUrl": "https://en.wikipedia.org/wiki/File:Image_created_with_a_mobile_phone.png",
+                      "createdAt": "2021-11-23T10:57:08.905Z",
+                      "updatedAt": "2021-11-23T11:40:45.520Z",
+                      "__v": 0
+                    }
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+
+  delete:   
+    produces:
+      - application/json
+    tags:
+      - category
+    summary:
+      - delete category 
+    requestBody:
+    responses:
+      "200" : 
+        description  : deleted
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categoryDetails'
+              example:
+                {
+                  "message": "Category deleted successfully",
+                  "data": {
+                    "parentId": "619cc43cbd9c5a22c86919c0",
+                    "isHome": false,
+                    "_id": "619cd1f451d9923f908f001b",
+                    "title": "am",
+                    "code": "abc123chbj",
+                    "ImageUrl": "https://en.wikipedia.org/wiki/File:Image_created_with_a_mobile_phone.png",
+                    "createdAt": "2021-11-23T11:35:16.188Z",
+                    "updatedAt": "2021-11-23T11:35:16.188Z",
+                    "__v": 0
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+
+/api/admin/v1/category/list:
+  get:   
+    produces:
+      - application/json
+    tags:
+      - category
+    summary:
+      - List categories (which has home)  
+    requestBody:
+      content: 
+        application/json:
+            schema: 
+            example: 
+              filters: {
+                }
+              query: 
+              sort: {
+                  }
+    responses:
+      "200" : 
+        description  : list
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categoryDetails'   
+              example:
+                {
+                  "message": "Categorys Retrived successfully",
+                  "data": {
+                    "results": [
+                      {
+                        "parentId": "619cc43cbd9c5a22c86919c0",
+                        "isHome": true,
+                        "_id": "619cc43cbd9c5a22c86919c0",
+                        "title": "abc1h5",
+                        "code": "abc123ch",
+                        "ImageUrl": "",
+                        "createdAt": "2021-11-23T10:36:45.010Z",
+                        "updatedAt": "2021-11-23T10:36:45.010Z",
+                        "__v": 0
+                      },
+                      {
+                        "parentId": "619cc43cbd9c5a22c86919c0",
+                        "isHome": true,
+                        "_id": "619cc5d8c88a5c0d1015b8a5",
+                        "title": "abcsub1",
+                        "code": "abc123ch",
+                        "ImageUrl": "",
+                        "createdAt": "2021-11-23T10:43:36.131Z",
+                        "updatedAt": "2021-11-23T10:43:36.131Z",
+                        "__v": 0
+                      },
+                      {
+                        "parentId": "619cc43cbd9c5a22c86919c0",
+                        "isHome": true,
+                        "_id": "619cc5e1c88a5c0d1015b8a7",
+                        "title": "abcsub2",
+                        "code": "abc123chb",
+                        "ImageUrl": "",
+                        "createdAt": "2021-11-23T10:43:45.790Z",
+                        "updatedAt": "2021-11-23T10:43:45.790Z",
+                        "__v": 0
+                      }
+                    ],
+                    "total": 3
+                  }
+                }
+              
+      "400" : 
+        description  : Failed
+      "401" : 
+        description  : Un Authorized
+      "500" : 
+        description  : Server Error 
+
+
+components:
+  schemas:  
+    categoryDetails:
+      type: object
+      properties:
+        title:
+          type: string
+          description: category title.
+        code:
+          type: string
+          description: category code.
+        parentId: 
+          type: string
+          description: parent id of category.
+        imageUrl: 
+          type: string
+          description: imageUrl of category.
+        isHome:
+          type: boolean,
+          description: category is home or not.
+           
